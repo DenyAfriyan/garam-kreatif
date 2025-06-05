@@ -1,8 +1,8 @@
 @extends('app')
 @section('content')
 {{-- Hero --}}
-<section class="w-full relative" style="background: linear-gradient(to bottom, rgba(22,22,22,1), rgba(0,0,0,1));" x-data="{ open: false }">
-    <nav class="max-w-screen-2xl flex items-center justify-between mx-auto p-4">
+<section class="w-full relative overflow-x-hidden md:overflow-x-visible" style="background: linear-gradient(to bottom, rgba(22,22,22,1), rgba(0,0,0,1));" x-data="{ open: false }">
+    <nav class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ asset('assets/images/Logo_Youtube_Garam_1.png') }}" class="h-16 md:h-24" alt="Garam Kreatif Logo" />
         </a>
@@ -31,7 +31,7 @@
 
 
     </div>
-    <div class="max-w-screen-2xl justify-between mx-auto p-4 h-100 grid grid-cols-6 text-white mt-10  md:mb-24">
+    <div class="max-w-screen-xl justify-between mx-auto p-4 h-100 grid grid-cols-6 text-white mt-10  md:mb-24">
         <div class="relative col-span-4">
             <!-- Absolute "01" aligned to the right, nudged to match "narratives" -->
             <span class="absolute right-6 md:right-10 lg:right-18 top-0 text-gray-400 text-2xl">
@@ -50,13 +50,13 @@
     </div>
 </section>
 {{-- About --}}
-<section id="aboutus" class="w-full h-full relative bg-black text-white">
+<section id="aboutus" class="w-full h-full relative bg-black text-white overflow-x-hidden md:overflow-x-visible">
   <!-- Image untuk desktop (absolute kiri) -->
   <img src="{{ asset('assets/images/Logo_Youtube_Garam_2.png') }}"
        class="hidden md:block absolute top-0 md:right-[30%] lg:right-[36%] w-[100%] md:h-[85%] lg:h-[120%] object-contain pointer-events-none max-w-none"
        alt="Decorative" />
 
-  <div class="max-w-screen-2xl mx-auto h-full grid grid-cols-1 p-5 md:grid-cols-2 gap-8 pt-16 md:mb-32">
+  <div class="max-w-screen-xl mx-auto h-full grid grid-cols-1 p-5 md:grid-cols-2 gap-8 pt-16 md:mb-32">
     <!-- Gambar untuk mobile (bukan absolute, di atas teks) -->
     <div class="block md:hidden w-full">
       <img src="{{ asset('assets/images/Logo_Youtube_Garam_2.png') }}"
@@ -80,8 +80,8 @@
   </div>
 </section>
 {{-- Service --}}
-<section id="ourservice" class="w-full h-full relative text-white py-16" style="background: linear-gradient(to bottom,  rgba(0,0,0,1),rgba(22,22,22,1));">
-    <div class="max-w-screen-2xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-16 md:mb-20 lg:mb-32">
+<section id="ourservice" class="w-full h-full relative text-white py-16" style="background: linear-gradient(to bottom,  rgba(0,0,0,1),rgba(22,22,22,1)); overflow-x-hidden md:overflow-x-visible">
+    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-16 md:mb-20 lg:mb-32">
         <div class="justify-self-end">
         <span class="text-gray-400 text-2xl block">03</span>
         <div class="text-2xl md:text-4xl lg:text-7xl leading-tight mb-6">
@@ -104,7 +104,7 @@
         </div>
         </div>
     </div>
-    <div class="max-w-screen-2xl mx-auto px-4 md:mb-32">
+    <div class="max-w-screen-xl mx-auto px-4 md:mb-32">
         <div class="text-2xl md:text-4xl lg:text-7xl leading-tight mb-6 md:w-[60%]">
         A glimpse into what we've cooked up for brands we've worked with.
         </div>
@@ -117,7 +117,7 @@
     </div>
 </section>
 {{-- Our work --}}
-<section id="ourwork" class="w-full h-full relative text-white mb-24">
+<section id="ourwork" class="w-full h-full relative text-white mb-24 overflow-x-hidden md:overflow-x-visible">
   <div class="swiper mySwiperFreeMode px-4 py-10 bg-black">
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
@@ -143,7 +143,7 @@
     <div class="swiper-pagination mt-6"></div>
   </div>
 </section>
-<footer class="bg-black text-white py-12 px-6">
+<footer class="bg-black text-white py-12 px-6 overflow-x-hidden md:overflow-x-visible">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 items-start">
 
     <!-- Logo -->
