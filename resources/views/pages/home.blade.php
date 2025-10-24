@@ -1,5 +1,8 @@
 @extends('app')
 @section('content')
+<h1 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">
+  Garam Kreatif
+</h1>
 {{-- Hero --}}
 <section class="w-full relative overflow-x-hidden md:overflow-x-visible" style="background: linear-gradient(to bottom, rgba(22,22,22,1), rgba(0,0,0,1));" x-data="{ open: false }">
     <nav class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
