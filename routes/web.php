@@ -8,4 +8,6 @@ Route::prefix('{locale}')
     ->where(['locale' => 'en|id'])
     ->group(function () {
         Route::get('/', fn () => view('pages.home'))->name('home');
+        Route::get('/about', fn () => view('pages.about'))->name('about');
+        Route::get('/work', fn () => view('pages.work'))->name('work');
     });

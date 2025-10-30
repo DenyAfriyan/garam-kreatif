@@ -13,7 +13,7 @@
       your brand's own flavor of aesthetics.
     </p>
     <a
-      href="#"
+      href="{{ route('about', ['locale' => app()->getLocale()]) }}"
       class="text-gray-400 hover:text-white text-sm md:text-base transition-colors"
     >
       Read More

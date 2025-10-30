@@ -46,12 +46,14 @@
 <body class="bg-black m-0 p-0">
     {{-- contact us --}}
     <button
-    class="flex fixed top-5 right-5 sm:right-25 border border-white text-white bg-transparent
-            px-4 py-2 sm:px-5 sm:py-3 rounded-sm text-base sm:text-lg cursor-pointer
-             z-999999" aria-label="Contact us"
-    >
-    Contact Us
-    </button>
+  onclick="window.open('https:\/\/api.whatsapp.com/send/?phone=%2B6282261197833&amp;text&amp;type=phone_number&amp;app_absent=0', '_blank')"
+  class="flex fixed top-5 right-5 sm:right-25 border border-white text-white bg-transparent
+         px-4 py-2 sm:px-5 sm:py-3 rounded-sm text-base sm:text-lg cursor-pointer
+         z-999999"
+  aria-label="Contact us"
+>
+  Contact Us
+</button>
     <header>
         <nav class="bg-transparant">
             <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -67,10 +69,10 @@
                     <div class="items-center justify-between flex w-auto order-1 md:text-xl">
                         <ul class="flex font-base p-0  space-x-8 rtl:space-x-reverse flex-row mt-0">
                             <li>
-                                <a href="#" class="blockp-0 text-white" aria-current="page">Work</a>
+                                <a href="{{ route('work', ['locale' => app()->getLocale()]) }}" class="blockp-0 text-white" aria-current="page">Work</a>
                             </li>
                             <li>
-                                <a href="#" class="blockp-0 text-white">About</a>
+                                <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="blockp-0 text-white">About</a>
                             </li>
                         </ul>
                     </div>
@@ -91,8 +93,8 @@
             <!-- ABOUT -->
             <div class="flex flex-col gap-2 text-md text-gray-400 md:ms-7">
             <h4 class="text-white text-base mb-2">HOME</h4>
-            <a href="#ourwork" class="hover:text-white text-sm">Our Works</a>
-            <a href="#aboutus" class="hover:text-white text-sm">About Us</a>
+            <a href="{{ route('work', ['locale' => app()->getLocale()]) }}" class="hover:text-white text-sm">Our Works</a>
+            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="hover:text-white text-sm">About Us</a>
             <a href="#" class="hover:text-white text-sm">Our Team</a>
             </div>
 
@@ -108,8 +110,8 @@
             <!-- CONTACT -->
             <div class="flex flex-col text-md gap-2 text-sm text-gray-400">
             <h4 class="text-white text-base mb-2">CONTACT</h4>
-            <a href="#" class="hover:text-white text-sm">WhatsApp</a>
-            <a href="#" class="hover:text-white text-sm">Instagram</a>
+            <a href="https:\/\/api.whatsapp.com/send/?phone=%2B6282261197833&amp;text&amp;type=phone_number&amp;app_absent=0" class="hover:text-white text-sm">WhatsApp</a>
+            <a href="https://www.instagram.com/garamkreatif/?hl=id" target="_blank" class="hover:text-white text-sm">Instagram</a>
             <a href="#" class="hover:text-white">Email Us</a>
             </div>
 
@@ -125,6 +127,19 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    {{-- alpine js --}}
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+    function openWhatsApp() {
+    const phone = '6282261197833';
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const url = isMobile
+        ? `https://wa.me/${phone}`
+        : `https://web.whatsapp.com/send?phone=${phone}`;
+    window.open(url, '_blank');
+    }
+    </script>
 
     <!-- Initialize Swiper -->
     <script>
