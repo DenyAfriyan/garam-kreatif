@@ -30,9 +30,11 @@
 
     <!-- Right -->
     <div class="w-full max-w-xl space-y-4">
-      <div class="border-b border-gray-600 pb-3 text-lg md:text-2xl hover:text-gray-300 cursor-pointer transition">
-        Branding
-      </div>
+        <a href="{{ route('work', ['locale' => app()->getLocale()]) }}">
+            <div class="border-b border-gray-600 pb-3 text-lg md:text-2xl hover:text-gray-300 cursor-pointer transition">
+            Branding
+            </div>
+        </a>
       <div class="border-b border-gray-600 pb-3 text-lg md:text-2xl hover:text-gray-300 cursor-pointer transition">
         Design
       </div>
@@ -53,24 +55,26 @@
 </section>
 
 <section class="text-gray-200 max-w-7xl flex flex-wrap items-center justify-center mx-auto p-4 mt-5 md:py-16">
-  <div class="w-full">
-    <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img
-        class="w-full h-auto object-cover"
-        src="{{ asset('assets/images/othman_cover.png') }}"
-        alt="Othman for JFW 2024"
-      />
-    </div>
-    <p class="text-lg md:text-2xl mt-6 mb-3">
-      Othman for JFW 2024
-    </p>
-    <a
-      href="#"
-      class="text-gray-400 hover:text-white text-sm md:text-base transition-colors"
-    >
-      View Work
+    <a href="{{ route('othman', ['locale' => app()->getLocale()]) }}">
+        <div class="w-full">
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img
+                class="w-full h-auto object-cover"
+                src="{{ asset('assets/images/othman_cover.png') }}"
+                alt="Othman for JFW 2024"
+            />
+            </div>
+            <p class="text-lg md:text-2xl mt-6 mb-3">
+            Othman for JFW 2024
+            </p>
+            <a
+            href="#"
+            class="text-gray-400 hover:text-white text-sm md:text-base transition-colors"
+            >
+            View Work
+            </a>
+        </div>
     </a>
-  </div>
 </section>
 
 <section class="text-gray-200 max-w-7xl mx-auto p-4 mt-5 py-16">
@@ -125,7 +129,7 @@
   <!-- View All Work link -->
   <div class="text-center mt-20">
     <a
-      href="#"
+      href="{{ route('work', ['locale' => app()->getLocale()]) }}"
       class="text-white text-base md:text-2xl underline underline-offset-4 hover:text-gray-300 transition-colors"
     >
       View All Work

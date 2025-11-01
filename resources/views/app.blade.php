@@ -80,6 +80,20 @@
             </div>
         </nav>
     </header>
+    @if (request()->is(app()->getLocale() . '/othman'))
+<section
+    class="
+        relative w-full
+        h-[40vh] sm:h-[65vh] md:h-[85vh] lg:h-screen
+        -mt-28 sm:-mt-24 md:-mt-28
+        z-[-1]
+        flex items-center justify-center
+        bg-cover bg-center md:bg-center sm:bg-top bg-no-repeat
+    "
+    style="background-image: url('{{ asset('assets/images/othman_cover.png') }}');"
+>
+</section>
+@endif
 
     @yield('content')
     <footer class="text-gray-200 max-w-7xl mx-auto p-4 py-10 md:py-16 mb-5">
@@ -119,7 +133,7 @@
            <div class="flex flex-col text-md gap-2 text-gray-400">
             <h4 class="text-white text-xl">www.garamkreatif.com</h4>
             <h4 class="text-white text-xl">marketing@garamkreatif.com</h4>
-            <h4 class="text-white text-xl">+62 822-6119-7833</h4>
+            <h4 class="text-white text-lg">+62 822-6119-7833</h4>
             </div>
 
         </div>

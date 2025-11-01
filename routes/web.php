@@ -10,4 +10,6 @@ Route::prefix('{locale}')
         Route::get('/', fn () => view('pages.home'))->name('home');
         Route::get('/about', fn () => view('pages.about'))->name('about');
         Route::get('/work', fn () => view('pages.work'))->name('work');
+        Route::get('/othman', fn () => view('pages.othman'))->name('othman');
+
     });
