@@ -25,7 +25,8 @@
   <div class="grid sm:grid-cols-2 gap-8">
     <!-- Work Items -->
     <div x-show="active === 'all'" class="transition-all duration-300">
-        <div>
+        <a href="{{ route('othman', ['locale' => app()->getLocale()]) }}">
+            <div>
             <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-3/2">
                 <img
                     class="w-full h-auto object-cover"
@@ -41,6 +42,7 @@
                 View Work
             </a>
         </div>
+        </a>
     </div>
     <div x-show="active === 'all' || active === 'branding'" class="transition-all duration-300">
         <div>
